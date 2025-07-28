@@ -20,3 +20,11 @@ Sinta-se a vontade para colaborar aprimorando drivers ou criando novos.
     <th>✅ Concluído</th>
     <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/TCS34725">TCS34725</a/></th>
   </tr>
+  <tr>
+    <th>    <img src="assets/GY-MAX3G1OX.jpeg" alt="GY-MAX3G1OX" width="100"/>
+</th>
+    <th>GY-MAX3G1OX</th>
+    <th>⚠️ Parcialmente funcional</th>
+    <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/GY-MAX3G1OX">GY-MAX3G1OX</a/></th>
+  </tr>
+
