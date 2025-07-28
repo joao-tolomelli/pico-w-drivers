@@ -28,44 +28,36 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(VL53L0X C CXX ASM)
+project(TCS34725 C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(VL53L0X main.c
-                       libs/vl53l0x/core/src/vl53l0x_api.c
-                       libs/vl53l0x/core/src/vl53l0x_api_core.c
-                       libs/vl53l0x/core/src/vl53l0x_api_calibration.c
-                       libs/vl53l0x/core/src/vl53l0x_api_ranging.c
-                       libs/vl53l0x/platform/src/vl53l0x_platform.c
-                       )
+add_executable(TCS34725 main.c )
 
-pico_set_program_name(VL53L0X "VL53L0X")
-pico_set_program_version(VL53L0X "0.1")
+pico_set_program_name(TCS34725 "TCS34725")
+pico_set_program_version(TCS34725 "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(VL53L0X 0)
-pico_enable_stdio_usb(VL53L0X 1)
+pico_enable_stdio_uart(TCS34725 0)
+pico_enable_stdio_usb(TCS34725 1)
 
 # Add the standard library to the build
-target_link_libraries(VL53L0X
+target_link_libraries(TCS34725
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(VL53L0X PRIVATE
+target_include_directories(TCS34725 PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/vl53l0x/core/inc
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/vl53l0x/platform/inc
 )
 
 # Add any user requested libraries
-target_link_libraries(VL53L0X 
+target_link_libraries(TCS34725 
         hardware_i2c
         
         )
 
-pico_add_extra_outputs(VL53L0X)
+pico_add_extra_outputs(TCS34725)
 
