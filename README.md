@@ -28,7 +28,7 @@ Sinta-se a vontade para colaborar aprimorando drivers ou criando novos.
 <tr>
   <th><img src="assets/BMP280.jpeg" alt="BMP280" width="100"/></th>
   <th>AHT10</th>
-  <th>❌ Não iniciado</th>
+  <th>✅ Concluído</th>
   <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/AHT10">AHT10</a></th>
 </tr>
 <tr>
