@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(TCS34725 main.c )
+add_executable(TCS34725 main.c lib/tcs34725.c)
 
 pico_set_program_name(TCS34725 "TCS34725")
 pico_set_program_version(TCS34725 "0.1")
@@ -51,6 +51,7 @@ target_link_libraries(TCS34725
 # Add the standard include files to the build
 target_include_directories(TCS34725 PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/lib
 )
 
 # Add any user requested libraries
