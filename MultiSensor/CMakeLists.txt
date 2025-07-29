@@ -28,40 +28,41 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(aht10_temp_umidade C CXX ASM)
+project(MultiSensor C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(aht10_temp_umidade 
-aht10_temp_umidade.c 
-lib/aht10.c
+add_executable(MultiSensor 
+        MultiSensor.c 
+        lib/AHT10/aht10.c
+        lib/BH1750/bh1750.c
 )
 
-pico_set_program_name(aht10_temp_umidade "aht10_temp_umidade")
-pico_set_program_version(aht10_temp_umidade "0.1")
+pico_set_program_name(MultiSensor "MultiSensor")
+pico_set_program_version(MultiSensor "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(aht10_temp_umidade 0)
-pico_enable_stdio_usb(aht10_temp_umidade 1)
+pico_enable_stdio_uart(MultiSensor 0)
+pico_enable_stdio_usb(MultiSensor 1)
 
 # Add the standard library to the build
-target_link_libraries(aht10_temp_umidade
+target_link_libraries(MultiSensor
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(aht10_temp_umidade PRIVATE
-       ${CMAKE_CURRENT_LIST_DIR}
-       ${CMAKE_CURRENT_LIST_DIR}/lib
-        
+target_include_directories(MultiSensor PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/lib/AHT10
+        ${CMAKE_CURRENT_LIST_DIR}/lib/BH1750
 )
 
 # Add any user requested libraries
-target_link_libraries(aht10_temp_umidade
+target_link_libraries(MultiSensor 
         hardware_i2c
         )
 
-pico_add_extra_outputs(aht10_temp_umidade)
+pico_add_extra_outputs(MultiSensor)
 
