@@ -20,13 +20,13 @@ Sinta-se a vontade para colaborar aprimorando drivers ou criando novos.
   <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/BH1750">BH1750</a></th>
 </tr>
 <tr>
-  <th><img src="assets/BME280.jpeg" alt="BME280" width="100"/></th>
-  <th>BME280</th>
+  <th><img src="assets/BMP280.jpeg" alt="BMP280" width="100"/></th>
+  <th>BMP280</th>
   <th>❌ Não iniciado</th>
-  <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/BME280">BME280</a></th>
+  <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/BMP280">BMP280</a></th>
 </tr>
 <tr>
-  <th><img src="assets/BMP280.jpeg" alt="BMP280" width="100"/></th>
+  <th><img src="assets/AHT10.jpeg" alt="AHT10" width="100"/></th>
   <th>AHT10</th>
   <th>✅ Concluído</th>
   <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/AHT10">AHT10</a></th>
