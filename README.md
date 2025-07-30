@@ -56,6 +56,12 @@ Sinta-se a vontade para colaborar aprimorando drivers ou criando novos.
   <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/SD-CARD">SD-CARD</a></th>
 </tr>
 <tr>
+  <th><img src="assets/SSD1306.jpeg" alt="SSD1306" width="100"/></th>
+  <th>SSD1306</th>
+  <th>✅ Concluído</th>
+  <th><a href="https://github.com/joao-tolomelli/pico-w-drivers/tree/main/lcd_ssd1306">SSD1306</a></th>
+</tr>
+<tr>
   <th><img src="assets/TCS34725.jpeg" alt="TCS34725" width="100"/></th>
   <th>TCS34725</th>
   <th>✅ Concluído</th>
