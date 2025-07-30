@@ -13,7 +13,6 @@ int main()
     stdio_init_all();
 
     // Inicializa I2C e OLED
-    // Inicializa I2C OLED
     i2c_init(I2C_PORT1, 400000);
     gpio_set_function(I2C_SDA1, GPIO_FUNC_I2C);
     gpio_set_function(I2C_SCL1, GPIO_FUNC_I2C);
@@ -29,7 +28,17 @@ int main()
     uint16_t cont = 0;
 
     while (true) {
-        printf("Hello, world!\n");
-        sleep_ms(1000);
+        ssd1306_draw_string(36, 30, "Alo Mundo");
+        char temp_str[16];
+        snprintf(temp_str, sizeof(temp_str), "%d", cont);
+        ssd1306_draw_string(55, 50, temp_str);
+        ssd1306_show();
+        cont++;
+        if(cont > 100){
+            ssd1306_draw_string(55, 50, "      ");
+            ssd1306_show();
+            cont = 0;
+        } 
+        sleep_ms(500);
     }
 }
