@@ -106,8 +106,8 @@ int main()
 /****************************************************
  *                TASK PARA O WIFI
  ****************************************************/
-#define WIFI_SSID      "Lu e Deza"
-#define WIFI_PASSWORD  "liukin1208"
+#define WIFI_SSID      "xxxxxxxxxx"
+#define WIFI_PASSWORD  "xxxxxxxxxx"
 
 void wifi_task(void *pv) 
 {
