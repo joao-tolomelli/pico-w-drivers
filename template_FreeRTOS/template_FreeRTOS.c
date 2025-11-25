@@ -94,10 +94,12 @@ int main()
     xTaskCreate(wifi_task, "wifi", 4096, NULL, 2, NULL);
     xTaskCreate(display_task, "display", 3072, NULL, 1, NULL);
 
-    // Start FreeRTOS
+    // inicia FreeRTOS
     vTaskStartScheduler();
 
-    while (true) tight_loop_contents();
+    while (true) {
+        // Nunca deve chegar aqui
+    };
 }
 
 
