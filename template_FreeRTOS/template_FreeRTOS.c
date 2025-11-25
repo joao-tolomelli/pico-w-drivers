@@ -119,7 +119,7 @@ void wifi_task(void *pv)
 
     cyw43_arch_enable_sta_mode();
 
-    for (;;) 
+    while (true) 
     {
         xSemaphoreTake(xStatusMutex, portMAX_DELAY);
         strcpy(wifi_status_msg, "Conectando...");
@@ -165,7 +165,7 @@ void wifi_task(void *pv)
  ****************************************************/
 void display_task(void *pv) 
 {
-    for (;;) 
+    while (true) 
     {
         xSemaphoreTake(xDisplaySem, portMAX_DELAY);
 
