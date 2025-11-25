@@ -50,7 +50,6 @@
  ****************************************************/
 void wifi_task(void *pv);
 void display_task(void *pv);
-void heartbeat_task(void *pv);
 
 /****************************************************
  *                VARIÁVEIS GLOBAIS
@@ -60,12 +59,6 @@ SemaphoreHandle_t xStatusMutex;  // protege as mensagens
 
 char wifi_status_msg[64];
 char wifi_ip_msg[32];
-
-/****************************************************
- *                PROTÓTIPOS DE FUNÇÕES
- ****************************************************/
-void wifi_task(void *pv);
-void display_task(void *pv);
 
 /****************************************************
  *                     MAIN
