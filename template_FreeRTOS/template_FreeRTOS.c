@@ -24,6 +24,9 @@
  * trabalhar com o FreeRTOS (uso de vTaskDelay ao invés
  * de sleep_ms), e incorporada as proteções necessárias
  * para uso com FreeRTOS.
+ * 
+ * Importante: copiar a pata do FreeRTOS para dentro da
+ * paste do projeto.
  ****************************************************/
 
 #include <stdio.h>
@@ -40,7 +43,7 @@
 // Biblioteca SSD1306 externa
 #include "ssd1306.h"
 
-// I2C configuration (usando sua escolha)
+// I2C configuratção (usando sua escolha)
 #define I2C_PORT   i2c1
 #define SDA_PIN    14
 #define SCL_PIN    15
